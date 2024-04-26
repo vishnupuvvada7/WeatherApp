@@ -1,0 +1,104 @@
+/* Home container styling */
+.alert1-container {
+    background: linear-gradient(to top, #e0eefa 0%, #b3d4fc 100%); /* Gentle gradient */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+  }
+  
+  /* Heading styling */
+  .heading {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    color:#333;
+  }
+  
+  /* Alert container styling */
+  .alert-container {
+    background-color:rgb(187, 166, 166); /* Light red for warning */
+    border: 1px solid #ff1900; /* Red border */
+    color: #e0eefa;
+    border-radius: 20px;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    animation: pulse 1s ease-in-out infinite alternate; /* Subtle pulse animation */
+  }
+
+  .alert-details {
+color:white;
+
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Weather icon styling */
+  .weather-icon {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+  
+  /* Animation for specific weather types */
+  .spinTornado {
+    animation: spin 3s linear infinite; /* Existing spin animation (optional) */
+  }
+  
+  .spinHurricane {
+    animation: spin 2s linear infinite; /* Faster spin for hurricane */
+  }
+  
+  .pulseBlizzard {
+    animation: growShrink 2s ease-in-out infinite alternate; /* Grow and shrink animation */
+  }
+  
+  @keyframes growShrink {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  .flashFlood {
+    animation: flash 1s ease-in-out infinite alternate; /* Flashing animation */
+  }
+  
+  @keyframes flash {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+  
+  .pulseHeat {
+    animation: glow 1s ease-in-out infinite alternate; /* Glowing animation */
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 0px #fffa00; /* Start with a small yellow shadow */
+    }
+    50% {
+      text-shadow: 0 0 10px #fffa00; /* Increase shadow size and intensity at midpoint */
+    }
+    to {
+      text-shadow: 0 0 0px #fffa00; /* Back to small shadow at the end */
+    }
+  }
+  

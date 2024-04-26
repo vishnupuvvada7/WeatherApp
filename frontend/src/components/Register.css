@@ -1,0 +1,7 @@
+.bg-white{
+--bs-bg-opacity: 1;
+background-color: rgb(249, 196, 118);
+}
+body{
+    background-color:rgb(249, 196, 118);
+}

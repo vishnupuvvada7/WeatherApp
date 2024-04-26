@@ -1,0 +1,83 @@
+/* Home container styling */ 
+/* Home container styling */ 
+/* Home container styling */ 
+.home-container { 
+    background: linear-gradient(to bottom, #e0eefa 0%, #b3d4fc 100%); 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-image: url('C:\Users\chand\OneDrive\Desktop\MSWD\Weather-API\frontend\src\weather1.jpg'); /* Replace with your image path */ 
+    background-size: cover; 
+    background-position: center; 
+    opacity: 1.0; 
+  } 
+   
+  /* Card styling */ 
+  .yellow-card {  
+    background-color: rgb(92, 85, 85);  
+    padding: 10px;  
+    border-radius: 5px; 
+    max-width: 800px; /* Set optional max width for the card */ 
+    margin: 0 auto; /* Center the card horizontally within the container */ 
+    opacity: 1.0; 
+    box-shadow:10px 0 20px #008cff,-10px 0 20px #81c6ff; 
+  } 
+   
+   
+  /* Text styling */ 
+  h1 { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2.5rem; 
+    color: #000000; 
+    margin: 0; 
+  } 
+   
+  p { 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1rem; 
+    line-height: 1.5; 
+    color: #666; 
+    text-align: justify; 
+  } 
+   
+  /* Weather conditions styling */ 
+  .weather-condition { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 1rem; 
+  } 
+   
+  .weather-condition strong { 
+    font-weight: bold; 
+    margin-right: 10px; 
+  } 
+   
+  .weather-icon { 
+    font-size: 2rem; 
+    animation: spin 3s linear infinite; /* Example animation (optional) */ 
+  } 
+   
+  @keyframes spin { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(0deg); } 
+  } 
+   
+  /* Button styling */ 
+  button { 
+    background-color: #06114e; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    transition: background-color 0.2s ease-in-out; 
+     
+  } 
+   
+  button:hover { 
+    background-color: #051046; 
+    border-radius: 10px; 
+     
+  }
