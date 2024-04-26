@@ -9,6 +9,7 @@ export default defineConfig({
       external: [
         /^bootstrap\/dist\/css\/bootstrap\.min\.css$/,
         'react-chartjs-2', // Add react-chartjs-2 as an external module
+        'chart.js/auto'
       ],
     },
   },
