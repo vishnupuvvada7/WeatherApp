@@ -13,9 +13,9 @@ const Login = () => {
         event.preventDefault();
 
         // Update the base URL here
-        const baseURL = 'https://weather-app-liart-seven-23.vercel.app';
+        const baseURL = 'https://weather-app-liart-seven-23.vercel.app/login';
 
-        axios.post(`${baseURL}/login`, { email, password })
+        axios.post(`${baseURL}`, { email, password })
             .then(result => {
                 console.log(result);
                 if (result.data === "Success") {

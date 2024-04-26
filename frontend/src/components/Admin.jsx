@@ -9,7 +9,7 @@ const Admin = () => {
 
     useEffect(() => {
         // Fetch users data from the server
-        axios.get('http://localhost:3001/admin/users')
+        axios.get('http://weather-app-liart-seven-23.vercel.app/admin/users')
             .then(response => {
                 setUsers(response.data);
             })
