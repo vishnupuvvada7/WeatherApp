@@ -4,10 +4,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    cssCodeSplit: false, // Disable CSS code splitting to ensure all CSS is bundled
+    cssCodeSplit: false,
     rollupOptions: {
       external: [
-        /^bootstrap\/dist\/css\/bootstrap\.min\.css$/, // Declare Bootstrap CSS as an external module
+        /^bootstrap\/dist\/css\/bootstrap\.min\.css$/,
+        'react-chartjs-2', // Add react-chartjs-2 as an external module
       ],
     },
   },
