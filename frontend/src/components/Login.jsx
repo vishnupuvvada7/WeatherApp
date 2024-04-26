@@ -3,15 +3,19 @@ import { useState } from 'react';
 import { Link } from "react-router-dom"; 
 import axios from 'axios'; 
 import { useNavigate } from 'react-router-dom'; 
+
 const Login = () => { 
     const [email, setEmail] = useState(''); 
     const [password, setPassword] = useState(''); 
     const navigate = useNavigate(); 
- 
+
     const handleSubmit = (event) => { 
         event.preventDefault(); 
-         
-        axios.post( 'http://localhost:3001/login', {email, password}) 
+        
+        // Update the base URL here
+        const baseURL = 'https://weather-app-liart-seven-23.vercel.app';
+
+        axios.post( `${baseURL}/login`, {email, password}) 
         .then(result => { 
             console.log(result); 
             if(result.data === "Success"){ 
@@ -25,11 +29,10 @@ const Login = () => {
         }) 
         .catch(err => console.log(err)); 
     } 
- 
+
     return ( 
         <div> 
-              
-<div className="d-flex justify-content-center align-items-center text-center vh-100" > 
+            <div className="d-flex justify-content-center align-items-center text-center vh-100" > 
                 <div className="bg-blue p-3 rounded" style={{width: '40%'}}> 
                     <h2 className='mb-3 text-primary'>Login</h2> 
                     <form onSubmit={handleSubmit}> 
@@ -71,18 +74,18 @@ const Login = () => {
                             </div> 
                         </div> 
                     </form> 
-                   <div className="container my-2 d-flex justify-content-center align-items-center"> 
-                   <p>Don't have an account?</p>
-                   <div>
-                  </div>
-                  </div>
-                  <div className="container my-2 d-flex justify-content-center align-items-center">
-                  <Link to='/register' className="btn btn-secondary">Register</Link>
-                  </div>
+                    <div className="container my-2 d-flex justify-content-center align-items-center"> 
+                        <p>Don't have an account?</p>
+                        <div>
+                        </div>
+                    </div>
+                    <div className="container my-2 d-flex justify-content-center align-items-center">
+                        <Link to='/register' className="btn btn-secondary">Register</Link>
+                    </div>
                 </div> 
             </div> 
         </div> 
     ) 
 } 
- 
+
 export default Login;
